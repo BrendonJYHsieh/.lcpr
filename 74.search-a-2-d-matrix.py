@@ -36,22 +36,11 @@ class Solution:
             if target == matrix[row_end_idx][column_end_idx]:
                 return True
 
-            print('start:',row_start_idx, column_start_idx)
-            print('end:',row_end_idx, column_end_idx)
-            print('mid:',row_mid_idx, column_mid_idx)
-
             if matrix[row_mid_idx][column_mid_idx] <= matrix[row_start_idx][column_start_idx]:
                 return False
             
             if matrix[row_mid_idx][column_mid_idx] >= matrix[row_end_idx][column_end_idx]:
                 return False
-            
-            # if(matrix[row_start_idx][column_start_idx] == matrix[row_mid_idx][column_mid_idx]):
-            #     return False
-            
-            # if(matrix[row_end_idx][column_end_idx] == matrix[row_mid_idx][column_mid_idx]):
-            #     return False
-
 
             if(matrix[row_mid_idx][column_mid_idx] < target):
                 row_start_idx = row_mid_idx
